@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Churn Predictor</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <script src="/your-path-to-fontawesome/js/brands.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Churn Predictor</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+                <input class="form-input" type="text" name="customer_id" placeholder="customer id"><br>
+                <input class="form-input" type="text" name="vintage" placeholder="vintage"><br>
+                <input class="form-input" type="text" name="age" placeholder="age"><br>
+                <input class="form-input" type="text" name="gender" placeholder="gender "><br>
+                <input class="form-input" type="text" name="dependents" placeholder=" no. of dependents"><br>
+                <input class="form-input" type="text" name="customer_nw_category" placeholder="customer_net_worth [1:H,2:M,3:l]"><br>
+                <input class="form-input" type="text" name="branch_code" placeholder="branch_code"><br>
+                <input class="form-input" type="text" name="days_since_last_transaction" placeholder="days since last transaction"><br>
+                <input class="form-input" type="text" name="current_balance" placeholder="current balance"><br>
+                <input class="form-input" type="text" name="average_monthly_balance_prevQ2" placeholder="average monthly previous balance(IN quaters)"><br>
+                <input class="form-input" type="text" name="current_month_credit" placeholder="current month credit"><br>
+                <input class="form-input" type="text" name="previous_month_credit" placeholder="previous month credit"><br>
+                <input class="form-input" type="text" name="previous_month_debit" placeholder="previous month debit"><br>
+
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+
+        <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href=""><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://www.linkedin.com/in/sarthak-modi-35831918b/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'>Made BY Sarthak modi.</p>
+       </div>
+
+    </body>
+</html>
