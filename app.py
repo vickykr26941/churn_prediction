@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 import pickle
 import numpy as np
 
-# Load the Random Forest CLassifier model
+# load the random forest classfier model 
 filename = 'churn-prediction-lrc-model.pkl'
 classifier = pickle.load(open(filename, 'rb'))
 
